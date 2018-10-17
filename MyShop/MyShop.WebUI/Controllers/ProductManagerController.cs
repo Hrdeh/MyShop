@@ -1,4 +1,5 @@
 ﻿using MyShop.Core.Models;
+using MyShop.Core.ViewModels;
 using MyShop.DataAccess.InMemory;
 using System;
 using System.Collections.Generic;
@@ -11,10 +12,12 @@ namespace MyShop.WebUI.Controllers
 	public class ProductManagerController:Controller
 	{
 		ProductRepository context;
+		ProductCategoryRepository productCategories;
 
 		public ProductManagerController()
 		{
 			context = new ProductRepository();
+			productCategories = new ProductCategoryRepository();
 		}
 
 		// GET: ProductManager
@@ -26,6 +29,9 @@ namespace MyShop.WebUI.Controllers
 
 		public ActionResult Create()
 		{
+			ProductManagerViewModel seto = new ProductManagerViewModel();
+			ProductManagerViewModel viewModel = new ProductManagerViewModel();
+			
 			Product product = new Product();
 			return View(product);
 		}
