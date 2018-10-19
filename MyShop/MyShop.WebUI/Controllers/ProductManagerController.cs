@@ -29,11 +29,11 @@ namespace MyShop.WebUI.Controllers
 
 		public ActionResult Create()
 		{
-			ProductManagerViewModel seto = new ProductManagerViewModel();
 			ProductManagerViewModel viewModel = new ProductManagerViewModel();
 			
-			Product product = new Product();
-			return View(product);
+			viewModel.Product = new Product();
+			viewModel.ProductCategories = productCategories.Collection();
+			return View(viewModel);
 		}
 
 		[HttpPost]
@@ -61,7 +61,12 @@ namespace MyShop.WebUI.Controllers
 			}
 			else
 			{
-				return View(product);
+				ProductManagerViewModel viewModel = new ProductManagerViewModel();
+
+				viewModel.Product = product;
+				viewModel.ProductCategories = productCategories.Collection();
+
+				return View(viewModel);
 			}
 		}
 
