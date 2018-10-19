@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace MyShop.DataAccess.InMemory
 {
-	public class ProductCategoryRepository
+	public class _dont_need_ProductCategoryRepository
 	{
 		ObjectCache cache = MemoryCache.Default;
 		List<ProductCategory> productCategories;
 
-		public ProductCategoryRepository()
+		public _dont_need_ProductCategoryRepository()
 		{
 			productCategories = cache["productCategories"] as List<ProductCategory>;
 			if (productCategories == null)

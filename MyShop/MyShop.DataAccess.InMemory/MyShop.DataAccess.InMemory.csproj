@@ -42,8 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProductCategoryRepository.cs" />
-    <Compile Include="ProductRepository.cs" />
+    <Compile Include="InMemoryRepository.cs" />
+    <Compile Include="depreicated\_dont_need_ProductCategoryRepository.cs" />
+    <Compile Include="depreicated\_dont_need_ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
