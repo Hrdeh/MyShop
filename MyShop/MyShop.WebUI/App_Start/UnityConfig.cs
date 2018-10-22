@@ -1,3 +1,6 @@
+using MyShop.Core.Contracts;
+using MyShop.Core.Models;
+using MyShop.DataAccess.InMemory;
 using System;
 
 using Unity;
@@ -36,12 +39,14 @@ namespace MyShop.WebUI
         /// </remarks>
         public static void RegisterTypes(IUnityContainer container)
         {
-            // NOTE: To load from web.config uncomment the line below.
-            // Make sure to add a Unity.Configuration to the using statements.
-            // container.LoadConfiguration();
+			// NOTE: To load from web.config uncomment the line below.
+			// Make sure to add a Unity.Configuration to the using statements.
+			// container.LoadConfiguration();
 
-            // TODO: Register your type's mappings here.
-            // container.RegisterType<IProductRepository, ProductRepository>();
-        }
+			// TODO: Register your type's mappings here.
+			// container.RegisterType<IProductRepository, ProductRepository>();
+			container.RegisterType<IRepository<Product>, InMemoryRepository<Product>>();
+			container.RegisterType<IRepository<ProductCategory>, InMemoryRepository<ProductCategory>>();
+		}
     }
 }
