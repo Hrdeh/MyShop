@@ -19,21 +19,21 @@ namespace MyShop.WebUI.Controllers
         public ActionResult Index()
         {
 			var model = basketService.GetBasketItems(this.HttpContext);
-            return View(model);
+         return View(model);
         }
 
 		public ActionResult AddToBasket(string Id)
 		{
 			basketService.AddToBasket(this.HttpContext, Id);
 
-			return View();
+			return RedirectToAction("Index");
 		}
 
 		public ActionResult RemoveFromBasket(string Id)
 		{
 			basketService.RemoveFromBasket(this.HttpContext, Id);
 
-			return View();
+			return RedirectToAction("Index");
 		}
 
 		public PartialViewResult BasketSummary()

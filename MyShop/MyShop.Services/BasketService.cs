@@ -17,7 +17,7 @@ namespace MyShop.Services
 
 		public const string BasketSessionName = "eCommerceBasket";
 
-		public BasketService(IRepository<Product> ProductContext, IRepository<Basket> BasketContext, )
+		public BasketService(IRepository<Product> ProductContext, IRepository<Basket> BasketContext)
 		{
 			this.basketContext = BasketContext;
 			this.productContext = ProductContext;
@@ -136,7 +136,7 @@ namespace MyShop.Services
 				decimal? basketTotal = (from item in basket.BasketItems
 												join p in productContext.Collection() on item.ProductId equals p.Id
 												select item.Quantity * p.Price).Sum();
-				model.BastCount = basketCount ?? 0;
+				model.BasketCount = basketCount ?? 0;
 				model.BasketTotal = basketTotal ?? decimal.Zero;
 
 				return model;
