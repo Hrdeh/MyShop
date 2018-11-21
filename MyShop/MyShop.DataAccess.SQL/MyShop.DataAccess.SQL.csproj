@@ -61,6 +61,14 @@
     <Compile Include="Migrations\201811201932373_AddCustomers.Designer.cs">
       <DependentUpon>201811201932373_AddCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811202150549_AddedOrders.cs" />
+    <Compile Include="Migrations\201811202150549_AddedOrders.Designer.cs">
+      <DependentUpon>201811202150549_AddedOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811210041047_orderdoover.cs" />
+    <Compile Include="Migrations\201811210041047_orderdoover.Designer.cs">
+      <DependentUpon>201811210041047_orderdoover.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLRepository.cs" />
@@ -84,6 +92,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811201932373_AddCustomers.resx">
       <DependentUpon>201811201932373_AddCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811202150549_AddedOrders.resx">
+      <DependentUpon>201811202150549_AddedOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811210041047_orderdoover.resx">
+      <DependentUpon>201811210041047_orderdoover.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

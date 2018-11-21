@@ -13,6 +13,7 @@ namespace MyShop.DataAccess.SQL
 		public DataContext() : base("DefaultConnection")
 		{
 		}
+
 		public DbSet<Product> Products { get; set; }
 		public DbSet<ProductCategory> ProductCategories { get; set; }
 
@@ -20,5 +21,8 @@ namespace MyShop.DataAccess.SQL
 		public DbSet<BasketItem> BasketItems { get; set; }
 
 		public DbSet<Customer> Customers { get; set; }
+
+		public DbSet<Order> Orders { get; set; }
+		public DbSet<OrderItem> OrderItems { get; set; }
 	}
 }
